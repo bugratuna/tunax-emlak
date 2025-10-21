@@ -167,7 +167,7 @@ const ContactPage = () => {
                             <div>
                                 <h3 className="font-semibold text-lg text-primary">Adres</h3>
                                 <a href="https://www.google.com/maps/search/?api=1&query=Realty+Tunax+G%C3%BCvenlik,+Derya+Cd.+Lidya+park+apt+No:20/b,+07230+Muratpa%C5%9Fa/Antalya" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors duration-300 cursor-pointer">
-                                    Güvenlik, Derya Cd. Lidya park apt No:20/b, 07230 Muratpaşa/Antalya
+                                    Kütükçü, Şelale Cd. No:123 D:117, 07080, 07000 Kepez/Antalya
                                 </a>
                             </div>
                         </div>
@@ -204,14 +204,12 @@ const ContactPage = () => {
                         </div>
                         <div className="w-full h-80 rounded-xl overflow-hidden shadow-lg border-4 border-gray-200">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d547.9825604473741!2d30.688246430127247!3d36.89775863776394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c38fac7ca31347%3A0x8949b9f942d8394!2sRealty%20Tunax%20%7C%20Yeni%20Nesil%20Gayrimenkul!5e0!3m2!1str!2str!4v1757186353728!5m2!1str!2str"
-                                title="Ofis Konumu"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1032.6381598036398!2d30.69165765869525!3d36.92445130734355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c38f7178829f6d%3A0xac6845f9b3a63bf8!2zQlRNIEVMRUtUUsSwS0zEsCBCxLBTxLBLTEVUIEFOVEFMWUE!5e0!3m2!1sen!2str!4v1761025587450!5m2!1sen!2str"
                                 width="100%"
                                 height="100%"
                                 style={{border: 0}}
-                                allowFullScreen=""
                                 loading="lazy"
-                            ></iframe>
+                                referrerPolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </motion.div>
                 </div>

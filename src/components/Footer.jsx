@@ -43,7 +43,7 @@ const Footer = () => {
                 <div>
                     <h4 className="font-semibold mb-4 text-secondary">İletişim</h4>
                     <ul className="space-y-3 text-sm">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Realty+Tunax+G%C3%BCvenlik,+Derya+Cd.+Lidya+park+apt+No:20/b,+07230+Muratpa%C5%9Fa/Antalya" target="_blank" rel="noopener noreferrer" className="flex items-start"><MapPin className="w-4 h-4 mr-2 mt-1" /><span>Güvenlik, Derya Cd. Lidya park apt No:20/b, 07230 Muratpaşa/Antalya</span></a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Realty+Tunax+G%C3%BCvenlik,+Derya+Cd.+Lidya+park+apt+No:20/b,+07230+Muratpa%C5%9Fa/Antalya" target="_blank" rel="noopener noreferrer" className="flex items-start"><MapPin className="w-4 h-4 mr-2 mt-1" /><span>Kütükçü, Şelale Cd. No:123 D:117, 07080, 07000 Kepez/Antalya</span></a>
                         <a href="tel:+905530842270" className="flex items-center"><Phone className="w-4 h-4 mr-2" /><span>+90 553 084 22 70</span></a>
                         <a href="mailto:ismail.tuna@realtytunax.com" className="flex items-center"><Mail className="w-4 h-4 mr-2" /><span>ismail.tuna@realtytunax.com</span></a>
                     </ul>

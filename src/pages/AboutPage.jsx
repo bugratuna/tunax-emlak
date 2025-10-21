@@ -6,7 +6,7 @@ import SahibindenIcon from "../components/icons/SahibindenIcon.jsx";
 const teamMembers = [
     {
         name: 'İsmail Tuna',
-        role: 'Gayrimenkul Danışmanı',
+        role: 'Ofis Sahibi (Broker)',
         bio:'Müşteri ilişkileri ve pazarlama stratejileri konusundaki gücüyle Realty Tunax\'ın vizyonunu sahaya yansıtmaktadır. Teknolojiyi kullanarak mülklerinizi en geniş kitlelere ulaştırma konusunda yenilikçi çözümler sunar.',
         image: 'https://image5.sahibinden.com/users/26/40/67/p200_profile_96264067_3278857.jpg',
         social: {
@@ -14,10 +14,10 @@ const teamMembers = [
         }
     },
     {
-        name: 'Recep Tuna',
-        role: 'Ofis Sahibi (Broker)',
+        name: 'Ertuğrul Uygun',
+        role: 'Ofis Çalışanı',
         bio:  'Emlak ve Emlak Yönetimi alanındaki akademik bilgisi ve saha tecrübesiyle, müşterilerimize en doğru yatırım kararlarını almaları için rehberlik etmektedir. Kentsel dönüşüm ve piyasa analizi konularında uzmandır.',
-        image: 'https://image5.sahibinden.com/users/22/79/62/p200_profile_96227962_8723476.jpg',
+        image: './public/imam.png',
         social: {
             email: 'mailto:recep.tuna@realtytunax.com'
         }
