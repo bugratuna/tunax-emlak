@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import { motion } from 'framer-motion';
-import { Linkedin, Mail } from 'lucide-react';
-import SahibindenIcon from "../components/icons/SahibindenIcon.jsx";
+import {  Mail } from 'lucide-react';
+import SEO from '../components/SEO.jsx';
 
 const teamMembers = [
     {
@@ -36,6 +36,11 @@ const AboutPage = () => {
             transition={{ duration: 0.5 }}
             className="container mx-auto px-6 py-16"
         >
+            <SEO
+                title="Realty Tunax | Hakkımızda"
+                description="Realty Tunax ekibi ve değerleri hakkında bilgi alın. Gayrimenkul sektöründe uzman kadromuzla tanışın."
+                keywords={['Realty Tunax', 'hakkımızda', 'emlak ofisi', 'ekibimiz']}
+            />
             <div className="text-center mb-12">
                 <h1 className="text-4xl font-bold text-primary">Hakkımızda</h1>
                 <p className="text-gray-600 mt-2">Bizi daha yakından tanıyın.</p>
@@ -47,7 +52,7 @@ const AboutPage = () => {
                     transition={{ duration: 0.8 }}
                     className="md:w-1/2"
                 >
-                    <img src="/about-us.png" alt="Realty Tunax Ekibi" className="rounded-lg shadow-md w-full" />
+                    <img src="/about-us.png" alt="Realty Tunax Ekibi" className="rounded-lg shadow-md w-full" loading="lazy" />
                 </motion.div>
                 <motion.div
                     initial={{ x: 100, opacity: 0 }}
@@ -70,7 +75,7 @@ const AboutPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 {teamMembers.map((member, index) => (
                     <motion.div
-                        key={index}
+                        key={member.name}
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.5 }}
@@ -81,6 +86,7 @@ const AboutPage = () => {
                             src={member.image}
                             alt={member.name}
                             className="w-40 h-40 rounded-full mx-auto mb-4 object-cover border-4 border-gray-200"
+                            loading="lazy"
                         />
                         <h3 className="text-2xl font-semibold text-primary">{member.name}</h3>
                         <p className="text-secondary font-medium mb-3">{member.role}</p>

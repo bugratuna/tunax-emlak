@@ -1,10 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import SEO from '../components/SEO.jsx';
 
 const ContactPage = () => {
     useEffect(() => {
-        window.scrollTo(0, 0);
+        if (typeof window !== 'undefined') {
+            window.scrollTo(0, 0);
+        }
     }, []);
 
     const [formData, setFormData] = useState({
@@ -31,14 +34,14 @@ const ContactPage = () => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Accept': 'application/json'
+                    Accept: 'application/json'
                 },
-                body: JSON.stringify(formData) // Form verilerini doğrudan JSON olarak gönder
+                body: JSON.stringify(formData)
             });
 
             if (response.ok) {
                 setFormStatus('success');
-                setFormData({name: '', email: '', subject: '', message: ''}); // Formu temizle
+                setFormData({name: '', email: '', subject: '', message: ''});
                 console.log("Mail başarıyla gönderildi!");
             } else {
                 const errorData = await response.json();
@@ -59,6 +62,11 @@ const ContactPage = () => {
             transition={{ duration: 0.5 }}
             className="min-h-screen bg-white text-gray-800 py-16"
         >
+            <SEO
+                title="Realty Tunax | İletişim"
+                description="Realty Tunax iletişim kanalları. Antalya gayrimenkul ihtiyaçlarınız için bize ulaşın."
+                keywords={['Realty Tunax', 'iletişim', 'Antalya gayrimenkul', 'emlak ofisi']}
+            />
             <div className="container mx-auto px-6">
                 <div className="text-center mb-12">
                     <motion.h1
@@ -88,7 +96,7 @@ const ContactPage = () => {
                         className="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200"
                     >
                         <h2 className="text-2xl font-semibold mb-6 text-primary">Mesaj Gönderin</h2>
-                        <form onSubmit={handleSubmit} className="space-y-6">
+                        <form onSubmit={handleSubmit} className="space-y-6" noValidate>
                             <div>
                                 <label htmlFor="name" className="font-medium text-gray-700">Adınız Soyadınız</label>
                                 <input
@@ -99,6 +107,7 @@ const ContactPage = () => {
                                     onChange={handleChange}
                                     placeholder="Adınız Soyadınız"
                                     className="mt-2 block w-full bg-white border-2 border-gray-300 rounded-lg p-3 text-gray-800 placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-300"
+                                    required
                                 />
                             </div>
                             <div>
@@ -111,6 +120,7 @@ const ContactPage = () => {
                                     onChange={handleChange}
                                     placeholder="eposta@adresiniz.com"
                                     className="mt-2 block w-full bg-white border-2 border-gray-300 rounded-lg p-3 text-gray-800 placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-300"
+                                    required
                                 />
                             </div>
                             <div>
@@ -123,6 +133,7 @@ const ContactPage = () => {
                                     onChange={handleChange}
                                     className="mt-2 block w-full bg-white border-2 border-gray-300 rounded-lg p-3 text-gray-800 placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-300"
                                     placeholder="Konu"
+                                    required
                                 />
                             </div>
                             <div>
@@ -134,6 +145,7 @@ const ContactPage = () => {
                                     onChange={handleChange}
                                     rows="6"
                                     className="mt-2 block w-full bg-white border-2 border-gray-300 rounded-lg p-3 text-gray-800 placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-300"
+                                    required
                                 ></textarea>
                             </div>
                             <button
@@ -172,18 +184,17 @@ const ContactPage = () => {
                             </div>
                         </div>
                         <div className="bg-gray-50 p-6 rounded-xl shadow-lg border border-gray-200 flex items-start space-x-4">
-                            <a className="bg-blue-100 p-3 rounded-full cursor-pointer">
-                                <Phone className="w-6 h-6 text-primary" />
-                            </a>
-                            <p></p>
+                             <span className="bg-blue-100 p-3 rounded-full">
+                                <Phone className="w-6 h-6 text-primary" aria-hidden="true" />
+                            </span>
                             <div>
                                 <h3 className="font-semibold text-lg text-primary">Telefon</h3>
-                                <div className="flex justify-items-start gap-2">
+                                <div className="flex items-center gap-2">
                                     <p className="font-bold">İsmail Tuna</p>
                                     <a href="tel:+905530842270" className="text-gray-600 hover:text-primary transition-colors duration-300">
                                     +90 553 084 22 70
                                 </a></div>
-                                <div className="flex justify-items-start gap-2">
+                                <div className="flex items-center gap-2">
                                     <p className="font-bold">Recep Tuna</p>
                                     <a href="tel:+905367259510" className="text-gray-600 hover:text-primary transition-colors duration-300">
                                         +90 536 725 95 10

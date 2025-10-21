@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import { motion } from 'framer-motion';
 import { Target, Eye, Gem } from 'lucide-react';
+import SEO from '../components/SEO.jsx';
 
 const VisionPage = () => {
     useEffect(() => {
@@ -14,6 +15,11 @@ const VisionPage = () => {
             transition={{ duration: 0.5 }}
             className="container mx-auto px-6 py-16"
         >
+            <SEO
+                title="Realty Tunax | Misyon ve Vizyon"
+                description="Realty Tunax'ın misyonu ve vizyonu hakkında bilgi alın. Antalya gayrimenkul piyasasında sürdürülebilir değer üretme hedeflerimizi keşfedin."
+                keywords={['Realty Tunax', 'misyon', 'vizyon', 'Antalya gayrimenkul']}
+            />
             <div className="text-center mb-16">
                 <h1 className="text-4xl font-bold text-primary">Misyon & Vizyon</h1>
                 <p className="text-gray-600 mt-2">Geleceğe bakışımız ve temel değerlerimiz.</p>
@@ -37,6 +43,7 @@ const VisionPage = () => {
                         src="/mission.png"
                         alt="Misyonumuz"
                         className="w-full mx-auto mt-5 mb-4 object-cover border-4 border-gray-200"
+                        loading="lazy"
                     />
                 </motion.div>
 
@@ -57,6 +64,7 @@ const VisionPage = () => {
                         src="/vision.png"
                         alt="Vizyonumuz"
                         className="w-full mx-auto mt-5 mb-4 object-cover border-4 border-gray-200"
+                        loading="lazy"
                     />
                 </motion.div>
             </div>

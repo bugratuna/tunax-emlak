@@ -1,12 +1,13 @@
 import React, {useEffect} from 'react';
 import { motion } from 'framer-motion';
-import { BarChart, ShieldCheck, Search, Drone } from 'lucide-react';
-import DigitalMarketingIcon from "../components/icons/DigitalMarketingIcon.jsx";
-import MarketingAnalysisIcon from "../components/icons/MarketingAnalysisIcon.jsx";
-import RentalServicesIcon from "../components/icons/RentalServicesIcon.jsx";
-import ExpertizeIcon from "../components/icons/ExpertizeIcon.jsx";
-import PurchaseAndSaleIcon from "../components/icons/PurchaseAndSaleIcon.jsx";
-import HouseTransitionIcon from "../components/icons/HouseTransitionIcon.jsx";
+import { Search, Drone } from 'lucide-react';
+import SEO from '../components/SEO.jsx';
+import DigitalMarketingIcon from '../components/icons/DigitalMarketingIcon.jsx';
+import MarketingAnalysisIcon from '../components/icons/MarketingAnalysisIcon.jsx';
+import RentalServicesIcon from '../components/icons/RentalServicesIcon.jsx';
+import ExpertizeIcon from '../components/icons/ExpertizeIcon.jsx';
+import PurchaseAndSaleIcon from '../components/icons/PurchaseAndSaleIcon.jsx';
+import HouseTransitionIcon from '../components/icons/HouseTransitionIcon.jsx';
 
 // Hata düzeltmesi: İkon component'i, import hatasını önlemek için doğrudan bu dosyaya eklendi.
 
@@ -58,7 +59,9 @@ const services = [
 
 const ServicesPage = () => {
     useEffect(() => {
-        window.scrollTo(0, 0);
+        if (typeof window !== 'undefined') {
+            window.scrollTo(0, 0);
+        }
     }, []);
     return (
         <motion.div
@@ -68,6 +71,11 @@ const ServicesPage = () => {
             transition={{ duration: 0.5 }}
             className="container mx-auto px-6 py-16"
         >
+            <SEO
+            title="Realty Tunax | Hizmetlerimiz"
+            description="Realty Tunax'ın sunduğu profesyonel gayrimenkul hizmetlerini keşfedin. Satış, kiralama, değerleme ve dijital pazarlama çözümlerimizle tanışın."
+            keywords={['Realty Tunax', 'hizmetler', 'gayrimenkul danışmanlığı', 'Antalya emlak']}
+        />
             <div className="text-center mb-12">
                 <h1 className="text-4xl font-bold text-primary">Hizmetlerimiz</h1>
                 <p className="text-gray-600 mt-2">Profesyonel gayrimenkul çözümleri.</p>
@@ -80,7 +88,7 @@ const ServicesPage = () => {
 
                     return (
                         <motion.div
-                            key={index}
+                            key={service.title}
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, amount: 0.3 }}
@@ -96,7 +104,7 @@ const ServicesPage = () => {
                                 <p className="text-gray-700">{service.description}</p>
                             </div>
                         </motion.div>
-                    )
+                    );
                 })}
             </div>
         </motion.div>
