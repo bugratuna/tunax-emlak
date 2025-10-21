@@ -17,7 +17,7 @@ const teamMembers = [
         name: 'Ertuğrul Uygun',
         role: 'Ofis Çalışanı',
         bio:  'Emlak ve Emlak Yönetimi alanındaki akademik bilgisi ve saha tecrübesiyle, müşterilerimize en doğru yatırım kararlarını almaları için rehberlik etmektedir. Kentsel dönüşüm ve piyasa analizi konularında uzmandır.',
-        image: './public/imam.png',
+        image: './imam.png',
         social: {
             email: 'mailto:recep.tuna@realtytunax.com'
         }
