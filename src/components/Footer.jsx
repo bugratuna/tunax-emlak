@@ -52,7 +52,7 @@ const Footer = () => {
                 <div>
                     <h4 className="font-semibold mb-4 text-secondary">Bizi Takip Edin</h4>
                     <div className="flex space-x-4">
-                        <a href="#" className="hover:text-secondary"><InstagramIcon /></a>
+                        <a href="https://www.instagram.com/realty.tunax.gayrimenkul/" className="hover:text-secondary"><InstagramIcon /></a>
                         <a href="#" className="hover:text-secondary"><FacebookIcon /></a>
                         <a href="#" className="hover:text-secondary"><TikTokIcon /></a>
                         <a href="https://realtyprimex.sahibinden.com/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white w-6 h-6" aria-label="Sahibinden.com" ><SahibindenIcon /></a>
