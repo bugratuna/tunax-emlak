@@ -55,7 +55,7 @@ const Footer = () => {
                         <a href="#" className="hover:text-secondary"><InstagramIcon /></a>
                         <a href="#" className="hover:text-secondary"><FacebookIcon /></a>
                         <a href="#" className="hover:text-secondary"><TikTokIcon /></a>
-                        <a href="https://tunaxgayrimenkul.sahibinden.com/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white w-6 h-6" aria-label="Sahibinden.com" ><SahibindenIcon /></a>
+                        <a href="https://realtyprimex.sahibinden.com/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white w-6 h-6" aria-label="Sahibinden.com" ><SahibindenIcon /></a>
                     </div>
                 </div>
             </div>
